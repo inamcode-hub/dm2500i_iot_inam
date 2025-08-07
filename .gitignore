@@ -1,0 +1,12 @@
+node_modules/
+*.log
+*.log.gz
+.env
+.env.*
+*.pid
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

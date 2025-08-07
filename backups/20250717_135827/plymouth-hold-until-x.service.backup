@@ -1,0 +1,14 @@
+# /etc/systemd/system/plymouth-hold-until-x.service
+[Unit]
+Description=Hold Plymouth splash until X starts
+After=plymouth-start.service
+Before=getty@tty1.service
+Conflicts=plymouth-quit.service plymouth-quit-wait.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

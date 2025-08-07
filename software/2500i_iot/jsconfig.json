@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@device/*": [
+        "device/*"
+      ],
+      "@network/*": [
+        "network/*"
+      ],
+      "@db/*": [
+        "db/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

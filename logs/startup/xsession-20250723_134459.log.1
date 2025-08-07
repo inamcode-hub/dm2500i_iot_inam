@@ -1,0 +1,683 @@
+[2025-07-23 13:44:59] Starting X session for DMI kiosk
+[2025-07-23 13:44:59] Starting DMI monitor script
+[2025-07-23 13:44:59] Monitor script started in background
+[2025-07-23 13:44:59] Running DMI startup script
+[2025-07-23 13:44:59] === Starting DM2500i Monitor (Improved) ===
+[2025-07-23 13:44:59] Display environment: DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:44:59] Checking components every 30 seconds...
+[2025-07-23 13:44:59] Chromium restart cooldown: 60 seconds
+[2025-07-23 13:44:59] WARNING: DM520 controller not running!
+[2025-07-23 13:44:59] Restarting DM520 controller...
+Your user’s .npmrc file (${HOME}/.npmrc)
+has a `globalconfig` and/or a `prefix` setting, which are incompatible with nvm.
+Run `nvm use --delete-prefix v18.17.1 --silent` to unset it.
+[13:44:59] === Starting DM2500i System ===
+[PM2] Applying action deleteProcessId on app [all](ids: [ 0, 1 ])
+[PM2] [pm2-logrotate](0) ✓
+[PM2] [dm2500i-api](1) ✓
+[PM2] [v] All Applications Stopped
+[PM2] [v] PM2 Daemon Stopped
+[13:45:00] Showing splash screen with feh...
+[13:45:00] Splash screen started (PID: 305012)
+[13:45:00] Starting DM520 controller...
+feh WARNING: Window Manager does not support MWM hints. To get a borderless window I have to bypass your wm.
+[13:45:01] Starting PM2 API service...
+[2025-07-23 13:45:01] DM520 controller restarted
+[2025-07-23 13:45:01] WARNING: API port 3002 not responding!
+[2025-07-23 13:45:01] Restarting PM2 API...
+[2025-07-23 13:45:01] PM2 restart failed, doing full restart...
+[2025-07-23 13:45:01] PM2 API started fresh
+[13:45:01] Waiting for API on port 3002...
+[2025-07-23 13:45:02] API is back online after 2 seconds
+[2025-07-23 13:45:02] WARNING: Chromium browser not running!
+[2025-07-23 13:45:02] Restarting Chromium browser...
+[2025-07-23 13:45:02] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[13:45:02] Port 3002 is open
+[13:45:02] API ready after 2 seconds
+[2025-07-23 13:45:07] ERROR: Chromium failed to start
+[13:45:07] Starting main Chromium application...
+[13:45:07] Chromium startup attempt 1...
+[306098:306098:0723/134508.130893:ERROR:chrome/browser/process_singleton_posix.cc:1059] Failed to create socket directory.
+[306098:306098:0723/134508.131045:ERROR:chrome/app/chrome_main_delegate.cc:530] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+[13:45:09] Chromium failed to start, attempt 1
+[13:45:11] Chromium startup attempt 2...
+[306362:306362:0723/134512.134911:ERROR:chrome/browser/process_singleton_posix.cc:1059] Failed to create socket directory.
+[306362:306362:0723/134512.135072:ERROR:chrome/app/chrome_main_delegate.cc:530] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+[306504:306504:0100/000000.152925:ERROR:content/zygote/zygote_linux.cc:660] write: Broken pipe (32)
+[13:45:13] Chromium failed to start, attempt 2
+[13:45:15] Chromium startup attempt 3...
+[306549:306549:0723/134516.166967:ERROR:chrome/browser/process_singleton_posix.cc:1059] Failed to create socket directory.
+[306549:306549:0723/134516.167149:ERROR:chrome/app/chrome_main_delegate.cc:530] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+[13:45:17] Chromium failed to start, attempt 3
+[13:45:19] ERROR: Failed to start Chromium after 3 attempts
+[13:45:19] Waiting for Chromium to fully load...
+[2025-07-23 13:45:37] WARNING: DM520 controller not running!
+[2025-07-23 13:45:37] Restarting DM520 controller...
+[2025-07-23 13:45:39] DM520 controller restarted
+[2025-07-23 13:45:39] WARNING: Chromium browser not running!
+[2025-07-23 13:45:39] Restarting Chromium browser...
+[2025-07-23 13:45:39] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[13:45:39] Warning: Chromium window not detected after 20 seconds
+[13:45:40] Closing splash screen...
+[13:45:40] System startup complete!
+[13:45:40] Main browser PID: 306550
+X connection to :0 broken (explicit kill or server shutdown).
+[2025-07-23 13:45:41] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:46:11] WARNING: DM520 controller not running!
+[2025-07-23 13:46:11] Restarting DM520 controller...
+[2025-07-23 13:46:13] DM520 controller restarted
+[2025-07-23 13:46:13] WARNING: API port 3002 not responding!
+[2025-07-23 13:46:13] Restarting PM2 API...
+[2025-07-23 13:46:13] PM2 restart failed, doing full restart...
+[2025-07-23 13:46:13] PM2 API started fresh
+[2025-07-23 13:46:14] API is back online after 2 seconds
+[2025-07-23 13:46:14] WARNING: Chromium browser not running!
+[2025-07-23 13:46:14] Restarting Chromium browser...
+[2025-07-23 13:46:14] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:46:19] ERROR: Chromium failed to start
+[2025-07-23 13:46:49] WARNING: DM520 controller not running!
+[2025-07-23 13:46:49] Restarting DM520 controller...
+[2025-07-23 13:46:51] DM520 controller restarted
+[2025-07-23 13:46:51] WARNING: Chromium browser not running!
+[2025-07-23 13:46:51] Restarting Chromium browser...
+[2025-07-23 13:46:51] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:46:53] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:47:23] WARNING: DM520 controller not running!
+[2025-07-23 13:47:23] Restarting DM520 controller...
+[2025-07-23 13:47:25] DM520 controller restarted
+[2025-07-23 13:47:25] WARNING: API port 3002 not responding!
+[2025-07-23 13:47:25] Restarting PM2 API...
+[2025-07-23 13:47:25] PM2 restart failed, doing full restart...
+[2025-07-23 13:47:25] PM2 API started fresh
+[2025-07-23 13:47:26] API is back online after 2 seconds
+[2025-07-23 13:47:26] WARNING: Chromium browser not running!
+[2025-07-23 13:47:26] Restarting Chromium browser...
+[2025-07-23 13:47:26] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:47:31] ERROR: Chromium failed to start
+[2025-07-23 13:48:01] WARNING: DM520 controller not running!
+[2025-07-23 13:48:01] Restarting DM520 controller...
+[2025-07-23 13:48:03] DM520 controller restarted
+[2025-07-23 13:48:33] WARNING: DM520 controller not running!
+[2025-07-23 13:48:33] Restarting DM520 controller...
+[2025-07-23 13:48:36] DM520 controller restarted
+[2025-07-23 13:48:36] WARNING: Chromium browser not running!
+[2025-07-23 13:48:36] Restarting Chromium browser...
+[2025-07-23 13:48:36] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:48:38] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:49:08] WARNING: DM520 controller not running!
+[2025-07-23 13:49:08] Restarting DM520 controller...
+[2025-07-23 13:49:10] DM520 controller restarted
+[2025-07-23 13:49:10] WARNING: Chromium browser not running!
+[2025-07-23 13:49:10] Restarting Chromium browser...
+[2025-07-23 13:49:10] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:49:15] ERROR: Chromium failed to start
+[2025-07-23 13:49:45] WARNING: DM520 controller not running!
+[2025-07-23 13:49:45] Restarting DM520 controller...
+[2025-07-23 13:49:47] DM520 controller restarted
+[2025-07-23 13:49:47] WARNING: Chromium browser not running!
+[2025-07-23 13:49:47] Restarting Chromium browser...
+[2025-07-23 13:49:47] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:49:49] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:50:19] WARNING: DM520 controller not running!
+[2025-07-23 13:50:19] Restarting DM520 controller...
+[2025-07-23 13:50:21] DM520 controller restarted
+[2025-07-23 13:50:21] WARNING: Chromium browser not running!
+[2025-07-23 13:50:21] Restarting Chromium browser...
+[2025-07-23 13:50:21] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:50:23] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:50:53] WARNING: DM520 controller not running!
+[2025-07-23 13:50:53] Restarting DM520 controller...
+[2025-07-23 13:50:55] DM520 controller restarted
+[2025-07-23 13:50:55] WARNING: Chromium browser not running!
+[2025-07-23 13:50:55] Restarting Chromium browser...
+[2025-07-23 13:50:55] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:51:00] ERROR: Chromium failed to start
+[2025-07-23 13:51:30] WARNING: DM520 controller not running!
+[2025-07-23 13:51:30] Restarting DM520 controller...
+[2025-07-23 13:51:32] DM520 controller restarted
+[2025-07-23 13:51:32] WARNING: Chromium browser not running!
+[2025-07-23 13:51:32] Restarting Chromium browser...
+[2025-07-23 13:51:32] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:51:34] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:52:04] WARNING: DM520 controller not running!
+[2025-07-23 13:52:04] Restarting DM520 controller...
+[2025-07-23 13:52:06] DM520 controller restarted
+[2025-07-23 13:52:06] WARNING: Chromium browser not running!
+[2025-07-23 13:52:06] Restarting Chromium browser...
+[2025-07-23 13:52:06] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:52:08] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:52:38] WARNING: DM520 controller not running!
+[2025-07-23 13:52:38] Restarting DM520 controller...
+[2025-07-23 13:52:40] DM520 controller restarted
+[2025-07-23 13:53:10] WARNING: DM520 controller not running!
+[2025-07-23 13:53:10] Restarting DM520 controller...
+[2025-07-23 13:53:12] DM520 controller restarted
+[2025-07-23 13:53:12] WARNING: Chromium browser not running!
+[2025-07-23 13:53:12] Restarting Chromium browser...
+[2025-07-23 13:53:12] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:53:14] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:53:44] WARNING: DM520 controller not running!
+[2025-07-23 13:53:44] Restarting DM520 controller...
+[2025-07-23 13:53:46] DM520 controller restarted
+[2025-07-23 13:53:46] WARNING: Chromium browser not running!
+[2025-07-23 13:53:46] Restarting Chromium browser...
+[2025-07-23 13:53:46] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:53:48] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:54:18] WARNING: DM520 controller not running!
+[2025-07-23 13:54:18] Restarting DM520 controller...
+[2025-07-23 13:54:20] DM520 controller restarted
+[2025-07-23 13:54:20] WARNING: Chromium browser not running!
+[2025-07-23 13:54:20] Restarting Chromium browser...
+[2025-07-23 13:54:20] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:54:25] ERROR: Chromium failed to start
+[2025-07-23 13:54:55] WARNING: DM520 controller not running!
+[2025-07-23 13:54:55] Restarting DM520 controller...
+[2025-07-23 13:54:57] DM520 controller restarted
+[2025-07-23 13:54:57] WARNING: Chromium browser not running!
+[2025-07-23 13:54:57] Restarting Chromium browser...
+[2025-07-23 13:54:57] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:54:59] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:55:29] WARNING: DM520 controller not running!
+[2025-07-23 13:55:29] Restarting DM520 controller...
+[2025-07-23 13:55:31] DM520 controller restarted
+[2025-07-23 13:55:31] WARNING: Chromium browser not running!
+[2025-07-23 13:55:31] Restarting Chromium browser...
+[2025-07-23 13:55:31] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:55:33] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:56:03] WARNING: DM520 controller not running!
+[2025-07-23 13:56:03] Restarting DM520 controller...
+[2025-07-23 13:56:05] DM520 controller restarted
+[2025-07-23 13:56:05] WARNING: Chromium browser not running!
+[2025-07-23 13:56:05] Restarting Chromium browser...
+[2025-07-23 13:56:05] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:56:11] ERROR: Chromium failed to start
+[2025-07-23 13:56:41] WARNING: DM520 controller not running!
+[2025-07-23 13:56:41] Restarting DM520 controller...
+[2025-07-23 13:56:43] DM520 controller restarted
+[2025-07-23 13:56:43] WARNING: Chromium browser not running!
+[2025-07-23 13:56:43] Restarting Chromium browser...
+[2025-07-23 13:56:43] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:56:45] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:57:15] WARNING: DM520 controller not running!
+[2025-07-23 13:57:15] Restarting DM520 controller...
+[2025-07-23 13:57:17] DM520 controller restarted
+[2025-07-23 13:57:17] WARNING: Chromium browser not running!
+[2025-07-23 13:57:17] Restarting Chromium browser...
+[2025-07-23 13:57:17] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:57:19] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:57:49] WARNING: DM520 controller not running!
+[2025-07-23 13:57:49] Restarting DM520 controller...
+[2025-07-23 13:57:51] DM520 controller restarted
+[2025-07-23 13:57:51] WARNING: Chromium browser not running!
+[2025-07-23 13:57:51] Restarting Chromium browser...
+[2025-07-23 13:57:51] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:57:56] ERROR: Chromium failed to start
+[2025-07-23 13:58:26] WARNING: DM520 controller not running!
+[2025-07-23 13:58:26] Restarting DM520 controller...
+[2025-07-23 13:58:28] DM520 controller restarted
+[2025-07-23 13:58:28] WARNING: Chromium browser not running!
+[2025-07-23 13:58:28] Restarting Chromium browser...
+[2025-07-23 13:58:28] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:58:30] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:59:00] WARNING: DM520 controller not running!
+[2025-07-23 13:59:00] Restarting DM520 controller...
+[2025-07-23 13:59:02] DM520 controller restarted
+[2025-07-23 13:59:02] WARNING: Chromium browser not running!
+[2025-07-23 13:59:02] Restarting Chromium browser...
+[2025-07-23 13:59:02] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:59:04] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 13:59:34] WARNING: DM520 controller not running!
+[2025-07-23 13:59:34] Restarting DM520 controller...
+[2025-07-23 13:59:36] DM520 controller restarted
+[2025-07-23 13:59:36] WARNING: Chromium browser not running!
+[2025-07-23 13:59:36] Restarting Chromium browser...
+[2025-07-23 13:59:36] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 13:59:41] ERROR: Chromium failed to start
+[2025-07-23 14:00:11] WARNING: DM520 controller not running!
+[2025-07-23 14:00:11] Restarting DM520 controller...
+[2025-07-23 14:00:13] DM520 controller restarted
+[2025-07-23 14:00:13] WARNING: Chromium browser not running!
+[2025-07-23 14:00:13] Restarting Chromium browser...
+[2025-07-23 14:00:13] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:00:15] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:00:45] WARNING: DM520 controller not running!
+[2025-07-23 14:00:45] Restarting DM520 controller...
+[2025-07-23 14:00:47] DM520 controller restarted
+[2025-07-23 14:00:47] WARNING: Chromium browser not running!
+[2025-07-23 14:00:47] Restarting Chromium browser...
+[2025-07-23 14:00:47] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:00:49] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:01:19] WARNING: DM520 controller not running!
+[2025-07-23 14:01:19] Restarting DM520 controller...
+[2025-07-23 14:01:21] DM520 controller restarted
+[2025-07-23 14:01:21] WARNING: Chromium browser not running!
+[2025-07-23 14:01:21] Restarting Chromium browser...
+[2025-07-23 14:01:21] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:01:27] ERROR: Chromium failed to start
+[2025-07-23 14:01:57] WARNING: DM520 controller not running!
+[2025-07-23 14:01:57] Restarting DM520 controller...
+[2025-07-23 14:01:59] DM520 controller restarted
+[2025-07-23 14:01:59] WARNING: Chromium browser not running!
+[2025-07-23 14:01:59] Restarting Chromium browser...
+[2025-07-23 14:01:59] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:02:01] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:02:32] WARNING: DM520 controller not running!
+[2025-07-23 14:02:32] Restarting DM520 controller...
+[2025-07-23 14:02:34] DM520 controller restarted
+[2025-07-23 14:03:04] WARNING: DM520 controller not running!
+[2025-07-23 14:03:04] Restarting DM520 controller...
+[2025-07-23 14:03:06] DM520 controller restarted
+[2025-07-23 14:03:06] WARNING: Chromium browser not running!
+[2025-07-23 14:03:06] Restarting Chromium browser...
+[2025-07-23 14:03:06] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:03:11] ERROR: Chromium failed to start
+[2025-07-23 14:03:41] WARNING: DM520 controller not running!
+[2025-07-23 14:03:41] Restarting DM520 controller...
+[2025-07-23 14:03:43] DM520 controller restarted
+[2025-07-23 14:03:43] WARNING: Chromium browser not running!
+[2025-07-23 14:03:43] Restarting Chromium browser...
+[2025-07-23 14:03:43] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:03:45] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:04:15] WARNING: DM520 controller not running!
+[2025-07-23 14:04:15] Restarting DM520 controller...
+[2025-07-23 14:04:17] DM520 controller restarted
+[2025-07-23 14:04:17] WARNING: Chromium browser not running!
+[2025-07-23 14:04:17] Restarting Chromium browser...
+[2025-07-23 14:04:17] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:04:19] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:04:49] WARNING: DM520 controller not running!
+[2025-07-23 14:04:49] Restarting DM520 controller...
+[2025-07-23 14:04:51] DM520 controller restarted
+[2025-07-23 14:04:51] WARNING: Chromium browser not running!
+[2025-07-23 14:04:51] Restarting Chromium browser...
+[2025-07-23 14:04:51] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:04:56] ERROR: Chromium failed to start
+[2025-07-23 14:05:26] WARNING: DM520 controller not running!
+[2025-07-23 14:05:26] Restarting DM520 controller...
+[2025-07-23 14:05:28] DM520 controller restarted
+[2025-07-23 14:05:28] WARNING: Chromium browser not running!
+[2025-07-23 14:05:28] Restarting Chromium browser...
+[2025-07-23 14:05:28] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:05:30] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:06:00] WARNING: DM520 controller not running!
+[2025-07-23 14:06:00] Restarting DM520 controller...
+[2025-07-23 14:06:02] DM520 controller restarted
+[2025-07-23 14:06:02] WARNING: Chromium browser not running!
+[2025-07-23 14:06:02] Restarting Chromium browser...
+[2025-07-23 14:06:02] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:06:07] ERROR: Chromium failed to start
+[2025-07-23 14:06:37] WARNING: DM520 controller not running!
+[2025-07-23 14:06:37] Restarting DM520 controller...
+[2025-07-23 14:06:39] DM520 controller restarted
+[2025-07-23 14:06:39] WARNING: Chromium browser not running!
+[2025-07-23 14:06:39] Restarting Chromium browser...
+[2025-07-23 14:06:39] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:06:44] ERROR: Chromium failed to start
+[2025-07-23 14:07:14] WARNING: DM520 controller not running!
+[2025-07-23 14:07:14] Restarting DM520 controller...
+[2025-07-23 14:07:16] DM520 controller restarted
+[2025-07-23 14:07:16] WARNING: Chromium browser not running!
+[2025-07-23 14:07:16] Restarting Chromium browser...
+[2025-07-23 14:07:16] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:07:18] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:07:48] WARNING: DM520 controller not running!
+[2025-07-23 14:07:48] Restarting DM520 controller...
+[2025-07-23 14:07:50] DM520 controller restarted
+[2025-07-23 14:07:50] WARNING: Chromium browser not running!
+[2025-07-23 14:07:50] Restarting Chromium browser...
+[2025-07-23 14:07:50] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:07:55] ERROR: Chromium failed to start
+[2025-07-23 14:08:25] WARNING: DM520 controller not running!
+[2025-07-23 14:08:25] Restarting DM520 controller...
+[2025-07-23 14:08:27] DM520 controller restarted
+[2025-07-23 14:08:27] WARNING: Chromium browser not running!
+[2025-07-23 14:08:27] Restarting Chromium browser...
+[2025-07-23 14:08:27] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:08:29] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:08:59] WARNING: DM520 controller not running!
+[2025-07-23 14:08:59] Restarting DM520 controller...
+[2025-07-23 14:09:01] DM520 controller restarted
+[2025-07-23 14:09:01] WARNING: Chromium browser not running!
+[2025-07-23 14:09:01] Restarting Chromium browser...
+[2025-07-23 14:09:01] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:09:03] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:09:33] WARNING: DM520 controller not running!
+[2025-07-23 14:09:33] Restarting DM520 controller...
+[2025-07-23 14:09:35] DM520 controller restarted
+[2025-07-23 14:09:35] WARNING: Chromium browser not running!
+[2025-07-23 14:09:35] Restarting Chromium browser...
+[2025-07-23 14:09:35] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:09:41] ERROR: Chromium failed to start
+[2025-07-23 14:10:11] WARNING: DM520 controller not running!
+[2025-07-23 14:10:11] Restarting DM520 controller...
+[2025-07-23 14:10:13] DM520 controller restarted
+[2025-07-23 14:10:13] WARNING: Chromium browser not running!
+[2025-07-23 14:10:13] Restarting Chromium browser...
+[2025-07-23 14:10:13] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:10:15] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:10:45] WARNING: DM520 controller not running!
+[2025-07-23 14:10:45] Restarting DM520 controller...
+[2025-07-23 14:10:47] DM520 controller restarted
+[2025-07-23 14:10:47] WARNING: Chromium browser not running!
+[2025-07-23 14:10:47] Restarting Chromium browser...
+[2025-07-23 14:10:47] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:10:49] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:11:19] WARNING: DM520 controller not running!
+[2025-07-23 14:11:19] Restarting DM520 controller...
+[2025-07-23 14:11:21] DM520 controller restarted
+[2025-07-23 14:11:21] WARNING: Chromium browser not running!
+[2025-07-23 14:11:21] Restarting Chromium browser...
+[2025-07-23 14:11:21] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:11:23] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:11:53] WARNING: DM520 controller not running!
+[2025-07-23 14:11:53] Restarting DM520 controller...
+[2025-07-23 14:11:55] DM520 controller restarted
+[2025-07-23 14:11:55] WARNING: Chromium browser not running!
+[2025-07-23 14:11:55] Restarting Chromium browser...
+[2025-07-23 14:11:55] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:11:57] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:12:27] WARNING: DM520 controller not running!
+[2025-07-23 14:12:27] Restarting DM520 controller...
+[2025-07-23 14:12:29] DM520 controller restarted
+[2025-07-23 14:12:29] WARNING: Chromium browser not running!
+[2025-07-23 14:12:29] Restarting Chromium browser...
+[2025-07-23 14:12:29] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:12:31] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:13:01] WARNING: DM520 controller not running!
+[2025-07-23 14:13:01] Restarting DM520 controller...
+[2025-07-23 14:13:03] DM520 controller restarted
+[2025-07-23 14:13:03] WARNING: Chromium browser not running!
+[2025-07-23 14:13:03] Restarting Chromium browser...
+[2025-07-23 14:13:03] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:13:05] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:13:35] WARNING: DM520 controller not running!
+[2025-07-23 14:13:35] Restarting DM520 controller...
+[2025-07-23 14:13:37] DM520 controller restarted
+[2025-07-23 14:13:37] WARNING: Chromium browser not running!
+[2025-07-23 14:13:37] Restarting Chromium browser...
+[2025-07-23 14:13:37] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:13:39] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:14:09] WARNING: DM520 controller not running!
+[2025-07-23 14:14:09] Restarting DM520 controller...
+[2025-07-23 14:14:11] DM520 controller restarted
+[2025-07-23 14:14:11] WARNING: Chromium browser not running!
+[2025-07-23 14:14:11] Restarting Chromium browser...
+[2025-07-23 14:14:11] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:14:13] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:14:43] WARNING: DM520 controller not running!
+[2025-07-23 14:14:43] Restarting DM520 controller...
+[2025-07-23 14:14:45] DM520 controller restarted
+[2025-07-23 14:14:45] WARNING: Chromium browser not running!
+[2025-07-23 14:14:45] Restarting Chromium browser...
+[2025-07-23 14:14:45] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:14:47] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:15:17] WARNING: DM520 controller not running!
+[2025-07-23 14:15:17] Restarting DM520 controller...
+[2025-07-23 14:15:19] DM520 controller restarted
+[2025-07-23 14:15:19] WARNING: Chromium browser not running!
+[2025-07-23 14:15:19] Restarting Chromium browser...
+[2025-07-23 14:15:19] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:15:21] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:15:51] WARNING: DM520 controller not running!
+[2025-07-23 14:15:51] Restarting DM520 controller...
+[2025-07-23 14:15:53] DM520 controller restarted
+[2025-07-23 14:15:53] WARNING: API port 3002 not responding!
+[2025-07-23 14:15:53] Restarting PM2 API...
+[2025-07-23 14:15:53] PM2 restart failed, doing full restart...
+[2025-07-23 14:15:53] PM2 API started fresh
+[2025-07-23 14:16:53] WARNING: DM520 controller not running!
+[2025-07-23 14:16:53] Restarting DM520 controller...
+[2025-07-23 14:16:55] DM520 controller restarted
+[2025-07-23 14:16:55] WARNING: API port 3002 not responding!
+[2025-07-23 14:16:55] Restarting PM2 API...
+[2025-07-23 14:16:55] PM2 restart failed, doing full restart...
+[2025-07-23 14:16:55] PM2 API started fresh
+[2025-07-23 14:17:55] WARNING: DM520 controller not running!
+[2025-07-23 14:17:55] Restarting DM520 controller...
+[2025-07-23 14:17:57] DM520 controller restarted
+[2025-07-23 14:17:57] WARNING: API port 3002 not responding!
+[2025-07-23 14:17:57] Restarting PM2 API...
+[2025-07-23 14:17:57] PM2 restart failed, doing full restart...
+[2025-07-23 14:17:58] PM2 API started fresh
+[2025-07-23 14:18:58] WARNING: DM520 controller not running!
+[2025-07-23 14:18:58] Restarting DM520 controller...
+[2025-07-23 14:19:00] DM520 controller restarted
+[2025-07-23 14:19:00] WARNING: API port 3002 not responding!
+[2025-07-23 14:19:00] Restarting PM2 API...
+[2025-07-23 14:19:00] PM2 restart failed, doing full restart...
+[2025-07-23 14:19:00] PM2 API started fresh
+[2025-07-23 14:19:02] API is back online after 3 seconds
+[2025-07-23 14:19:02] WARNING: Chromium browser not running!
+[2025-07-23 14:19:02] Restarting Chromium browser...
+[2025-07-23 14:19:02] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:19:04] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:19:34] WARNING: DM520 controller not running!
+[2025-07-23 14:19:34] Restarting DM520 controller...
+[2025-07-23 14:19:36] DM520 controller restarted
+[2025-07-23 14:19:36] WARNING: Chromium browser not running!
+[2025-07-23 14:19:36] Restarting Chromium browser...
+[2025-07-23 14:19:36] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:19:38] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:20:08] WARNING: DM520 controller not running!
+[2025-07-23 14:20:08] Restarting DM520 controller...
+[2025-07-23 14:20:10] DM520 controller restarted
+[2025-07-23 14:20:10] WARNING: Chromium browser not running!
+[2025-07-23 14:20:10] Restarting Chromium browser...
+[2025-07-23 14:20:10] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:20:15] ERROR: Chromium failed to start
+[2025-07-23 14:20:45] WARNING: DM520 controller not running!
+[2025-07-23 14:20:45] Restarting DM520 controller...
+[2025-07-23 14:20:47] DM520 controller restarted
+[2025-07-23 14:20:47] WARNING: Chromium browser not running!
+[2025-07-23 14:20:47] Restarting Chromium browser...
+[2025-07-23 14:20:47] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:20:52] ERROR: Chromium failed to start
+[2025-07-23 14:21:22] WARNING: DM520 controller not running!
+[2025-07-23 14:21:22] Restarting DM520 controller...
+[2025-07-23 14:21:24] DM520 controller restarted
+[2025-07-23 14:21:24] WARNING: Chromium browser not running!
+[2025-07-23 14:21:24] Restarting Chromium browser...
+[2025-07-23 14:21:24] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:21:29] ERROR: Chromium failed to start
+[2025-07-23 14:21:59] WARNING: DM520 controller not running!
+[2025-07-23 14:21:59] Restarting DM520 controller...
+[2025-07-23 14:22:01] DM520 controller restarted
+[2025-07-23 14:22:01] WARNING: Chromium browser not running!
+[2025-07-23 14:22:01] Restarting Chromium browser...
+[2025-07-23 14:22:01] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:22:06] ERROR: Chromium failed to start
+[2025-07-23 14:22:36] WARNING: DM520 controller not running!
+[2025-07-23 14:22:36] Restarting DM520 controller...
+[2025-07-23 14:22:38] DM520 controller restarted
+[2025-07-23 14:22:38] WARNING: Chromium browser not running!
+[2025-07-23 14:22:38] Restarting Chromium browser...
+[2025-07-23 14:22:38] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:22:43] ERROR: Chromium failed to start
+[2025-07-23 14:23:13] WARNING: DM520 controller not running!
+[2025-07-23 14:23:13] Restarting DM520 controller...
+[2025-07-23 14:23:15] DM520 controller restarted
+[2025-07-23 14:23:15] WARNING: Chromium browser not running!
+[2025-07-23 14:23:15] Restarting Chromium browser...
+[2025-07-23 14:23:15] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:23:20] ERROR: Chromium failed to start
+[2025-07-23 14:23:50] WARNING: DM520 controller not running!
+[2025-07-23 14:23:50] Restarting DM520 controller...
+[2025-07-23 14:23:52] DM520 controller restarted
+[2025-07-23 14:23:52] WARNING: Chromium browser not running!
+[2025-07-23 14:23:52] Restarting Chromium browser...
+[2025-07-23 14:23:52] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:23:55] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:24:25] WARNING: DM520 controller not running!
+[2025-07-23 14:24:25] Restarting DM520 controller...
+[2025-07-23 14:24:27] DM520 controller restarted
+[2025-07-23 14:24:27] WARNING: Chromium browser not running!
+[2025-07-23 14:24:27] Restarting Chromium browser...
+[2025-07-23 14:24:27] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:24:29] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:24:59] WARNING: DM520 controller not running!
+[2025-07-23 14:24:59] Restarting DM520 controller...
+[2025-07-23 14:25:01] DM520 controller restarted
+[2025-07-23 14:25:01] WARNING: Chromium browser not running!
+[2025-07-23 14:25:01] Restarting Chromium browser...
+[2025-07-23 14:25:01] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:25:03] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:25:33] WARNING: DM520 controller not running!
+[2025-07-23 14:25:33] Restarting DM520 controller...
+[2025-07-23 14:25:35] DM520 controller restarted
+[2025-07-23 14:25:35] WARNING: Chromium browser not running!
+[2025-07-23 14:25:35] Restarting Chromium browser...
+[2025-07-23 14:25:35] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:25:37] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:26:07] WARNING: DM520 controller not running!
+[2025-07-23 14:26:07] Restarting DM520 controller...
+[2025-07-23 14:26:09] DM520 controller restarted
+[2025-07-23 14:26:09] WARNING: Chromium browser not running!
+[2025-07-23 14:26:09] Restarting Chromium browser...
+[2025-07-23 14:26:09] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:26:11] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:26:41] WARNING: DM520 controller not running!
+[2025-07-23 14:26:41] Restarting DM520 controller...
+[2025-07-23 14:26:43] DM520 controller restarted
+[2025-07-23 14:26:43] WARNING: Chromium browser not running!
+[2025-07-23 14:26:43] Restarting Chromium browser...
+[2025-07-23 14:26:43] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:26:45] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:27:15] WARNING: DM520 controller not running!
+[2025-07-23 14:27:15] Restarting DM520 controller...
+[2025-07-23 14:27:17] DM520 controller restarted
+[2025-07-23 14:27:17] WARNING: Chromium browser not running!
+[2025-07-23 14:27:17] Restarting Chromium browser...
+[2025-07-23 14:27:17] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:27:22] ERROR: Chromium failed to start
+[2025-07-23 14:27:52] WARNING: DM520 controller not running!
+[2025-07-23 14:27:52] Restarting DM520 controller...
+[2025-07-23 14:27:54] DM520 controller restarted
+[2025-07-23 14:27:54] WARNING: Chromium browser not running!
+[2025-07-23 14:27:54] Restarting Chromium browser...
+[2025-07-23 14:27:54] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:27:59] ERROR: Chromium failed to start
+[2025-07-23 14:28:29] WARNING: DM520 controller not running!
+[2025-07-23 14:28:29] Restarting DM520 controller...
+[2025-07-23 14:28:31] DM520 controller restarted
+[2025-07-23 14:28:31] WARNING: Chromium browser not running!
+[2025-07-23 14:28:31] Restarting Chromium browser...
+[2025-07-23 14:28:31] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:28:36] ERROR: Chromium failed to start
+[2025-07-23 14:29:06] WARNING: DM520 controller not running!
+[2025-07-23 14:29:06] Restarting DM520 controller...
+[2025-07-23 14:29:08] DM520 controller restarted
+[2025-07-23 14:29:08] WARNING: Chromium browser not running!
+[2025-07-23 14:29:08] Restarting Chromium browser...
+[2025-07-23 14:29:08] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:29:13] ERROR: Chromium failed to start
+[2025-07-23 14:29:43] WARNING: DM520 controller not running!
+[2025-07-23 14:29:43] Restarting DM520 controller...
+[2025-07-23 14:29:45] DM520 controller restarted
+[2025-07-23 14:29:45] WARNING: Chromium browser not running!
+[2025-07-23 14:29:45] Restarting Chromium browser...
+[2025-07-23 14:29:45] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:29:50] ERROR: Chromium failed to start
+[2025-07-23 14:30:20] WARNING: DM520 controller not running!
+[2025-07-23 14:30:20] Restarting DM520 controller...
+[2025-07-23 14:30:22] DM520 controller restarted
+[2025-07-23 14:30:22] WARNING: Chromium browser not running!
+[2025-07-23 14:30:22] Restarting Chromium browser...
+[2025-07-23 14:30:22] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:30:27] ERROR: Chromium failed to start
+[2025-07-23 14:30:57] WARNING: DM520 controller not running!
+[2025-07-23 14:30:57] Restarting DM520 controller...
+[2025-07-23 14:30:59] DM520 controller restarted
+[2025-07-23 14:31:00] WARNING: Chromium browser not running!
+[2025-07-23 14:31:00] Restarting Chromium browser...
+[2025-07-23 14:31:00] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:31:05] ERROR: Chromium failed to start
+[2025-07-23 14:31:35] WARNING: DM520 controller not running!
+[2025-07-23 14:31:35] Restarting DM520 controller...
+[2025-07-23 14:31:37] DM520 controller restarted
+[2025-07-23 14:31:37] WARNING: Chromium browser not running!
+[2025-07-23 14:31:37] Restarting Chromium browser...
+[2025-07-23 14:31:37] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:31:42] ERROR: Chromium failed to start
+[2025-07-23 14:32:12] WARNING: DM520 controller not running!
+[2025-07-23 14:32:12] Restarting DM520 controller...
+[2025-07-23 14:32:14] DM520 controller restarted
+[2025-07-23 14:32:14] WARNING: Chromium browser not running!
+[2025-07-23 14:32:14] Restarting Chromium browser...
+[2025-07-23 14:32:14] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:32:19] ERROR: Chromium failed to start
+[2025-07-23 14:32:49] WARNING: DM520 controller not running!
+[2025-07-23 14:32:49] Restarting DM520 controller...
+[2025-07-23 14:32:51] DM520 controller restarted
+[2025-07-23 14:32:51] WARNING: Chromium browser not running!
+[2025-07-23 14:32:51] Restarting Chromium browser...
+[2025-07-23 14:32:51] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:32:56] ERROR: Chromium failed to start
+[2025-07-23 14:33:26] WARNING: Chromium browser not running!
+[2025-07-23 14:33:26] Restarting Chromium browser...
+[2025-07-23 14:33:26] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:33:31] ERROR: Chromium failed to start
+[2025-07-23 14:34:01] WARNING: Chromium browser not running!
+[2025-07-23 14:34:01] Restarting Chromium browser...
+[2025-07-23 14:34:01] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:34:06] ERROR: Chromium failed to start
+[2025-07-23 14:34:36] WARNING: Chromium browser not running!
+[2025-07-23 14:34:36] Restarting Chromium browser...
+[2025-07-23 14:34:36] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:34:41] ERROR: Chromium failed to start
+[2025-07-23 14:35:14] All components running OK
+[2025-07-23 14:35:44] WARNING: Chromium browser not running!
+[2025-07-23 14:35:44] Restarting Chromium browser...
+[2025-07-23 14:35:44] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:35:49] ERROR: Chromium failed to start
+[2025-07-23 14:36:19] WARNING: Chromium browser not running!
+[2025-07-23 14:36:19] Restarting Chromium browser...
+[2025-07-23 14:36:19] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:36:24] ERROR: Chromium failed to start
+[2025-07-23 14:36:54] WARNING: Chromium browser not running!
+[2025-07-23 14:36:54] Restarting Chromium browser...
+[2025-07-23 14:36:54] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:36:56] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:37:27] WARNING: Chromium browser not running!
+[2025-07-23 14:37:27] Restarting Chromium browser...
+[2025-07-23 14:37:27] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:37:32] ERROR: Chromium failed to start
+[2025-07-23 14:40:02] All components running OK
+[2025-07-23 14:40:32] WARNING: Chromium browser not running!
+[2025-07-23 14:40:32] Restarting Chromium browser...
+[2025-07-23 14:40:32] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:40:34] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:41:04] WARNING: Chromium browser not running!
+[2025-07-23 14:41:04] Restarting Chromium browser...
+[2025-07-23 14:41:04] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:41:06] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:41:36] WARNING: Chromium browser not running!
+[2025-07-23 14:41:36] Restarting Chromium browser...
+[2025-07-23 14:41:36] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:41:38] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:42:08] WARNING: Chromium browser not running!
+[2025-07-23 14:42:08] Restarting Chromium browser...
+[2025-07-23 14:42:08] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:42:10] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:42:40] WARNING: Chromium browser not running!
+[2025-07-23 14:42:40] Restarting Chromium browser...
+[2025-07-23 14:42:40] Using DISPLAY=:0 XAUTHORITY=/home/dmi/.Xauthority
+[2025-07-23 14:42:42] ERROR: Cannot connect to X server. Will retry on next check.
+[2025-07-23 14:43:12] WARNING: API port 3002 not responding!
+[2025-07-23 14:43:12] Restarting PM2 API...
+[2025-07-23 14:43:12] PM2 restart failed, doing full restart...
+[2025-07-23 14:43:12] PM2 API started fresh
+[2025-07-23 14:44:12] WARNING: API port 3002 not responding!
+[2025-07-23 14:44:12] Restarting PM2 API...
+[2025-07-23 14:44:12] PM2 restart failed, doing full restart...
+[2025-07-23 14:44:12] PM2 API started fresh
+[2025-07-23 14:45:12] WARNING: API port 3002 not responding!
+[2025-07-23 14:45:12] Restarting PM2 API...
+[2025-07-23 14:45:12] PM2 restart failed, doing full restart...
+[2025-07-23 14:45:12] PM2 API started fresh
+[2025-07-23 14:46:13] WARNING: DM520 controller not running!
+[2025-07-23 14:46:13] Restarting DM520 controller...
+[2025-07-23 14:46:15] DM520 controller restarted
+[2025-07-23 14:46:15] WARNING: API port 3002 not responding!
+[2025-07-23 14:46:15] Restarting PM2 API...
+[2025-07-23 14:46:15] PM2 restart failed, doing full restart...
+[2025-07-23 14:46:15] PM2 API started fresh

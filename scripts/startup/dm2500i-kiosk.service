@@ -1,0 +1,32 @@
+[Unit]
+Description=DM2500i Kiosk System
+After=multi-user.target network.target postgresql.service
+Wants=network.target
+
+[Service]
+Type=simple
+User=dmi
+Group=dmi
+PAMName=login
+TTYPath=/dev/tty7
+StandardInput=tty
+StandardOutput=journal
+
+# Environment
+Environment="HOME=/home/dmi"
+Environment="USER=dmi"
+Environment="PATH=/home/dmi/.nvm/versions/node/v18.17.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# Start the unified script
+ExecStart=/home/dmi/inam/scripts/startup/start-dm2500i.sh
+
+# Restart policy
+Restart=on-failure
+RestartSec=5
+
+# Resource limits
+CPUQuota=80%
+MemoryLimit=2G
+
+[Install]
+WantedBy=graphical.target

@@ -1,0 +1,123 @@
+[2025-07-17 12:59:11] Starting NoDM setup for DMI kiosk system
+[2025-07-17 12:59:11] === Step 1: Backing up current configuration ===
+[2025-07-17 12:59:11] Backing up systemd services...
+cp: cannot stat '/etc/systemd/system/autologin@dmi.service': No such file or directory
+'/etc/systemd/system/getty@tty1.service.d/override.conf' -> '/home/dmi/inam/backups/20250717_125911/override.conf'
+[2025-07-17 12:59:11] Backing up Plymouth-related services...
+[2025-07-17 12:59:11] Backups stored in: /home/dmi/inam/backups/20250717_125911
+[2025-07-17 12:59:11] === Step 2: Removing Plymouth getty dependencies ===
+[2025-07-17 12:59:11] Checking Plymouth service dependencies...
+plymouth-quit-wait.service
+● ├─system.slice
+● └─sysinit.target
+●   ├─apparmor.service
+●   ├─blk-availability.service
+●   ├─dev-hugepages.mount
+●   ├─dev-mqueue.mount
+●   ├─finalrd.service
+●   ├─keyboard-setup.service
+●   ├─kmod-static-nodes.service
+●   ├─lvm2-lvmpolld.socket
+●   ├─lvm2-monitor.service
+●   ├─multipathd.service
+○   ├─open-iscsi.service
+●   ├─plymouth-read-write.service
+○   ├─plymouth-start.service
+●   ├─proc-sys-fs-binfmt_misc.automount
+○   ├─setvtrgb.service
+●   ├─sys-fs-fuse-connections.mount
+●   ├─sys-kernel-config.mount
+●   ├─sys-kernel-debug.mount
+●   ├─sys-kernel-tracing.mount
+○   ├─systemd-ask-password-console.path
+●   ├─systemd-binfmt.service
+○   ├─systemd-boot-system-token.service
+●   ├─systemd-journal-flush.service
+●   ├─systemd-journald.service
+○   ├─systemd-machine-id-commit.service
+●   ├─systemd-modules-load.service
+●   ├─systemd-network-generator.service
+○   ├─systemd-pstore.service
+●   ├─systemd-random-seed.service
+●   ├─systemd-sysctl.service
+●   ├─systemd-sysusers.service
+●   ├─systemd-tmpfiles-setup-dev.service
+●   ├─systemd-tmpfiles-setup.service
+●   ├─systemd-udev-trigger.service
+●   ├─systemd-udevd.service
+●   ├─systemd-update-utmp.service
+●   ├─cryptsetup.target
+●   ├─local-fs.target
+●   │ ├─-.mount
+●   │ ├─boot-efi.mount
+●   │ ├─boot.mount
+○   │ ├─systemd-fsck-root.service
+●   │ └─systemd-remount-fs.service
+●   ├─swap.target
+●   │ └─swap.img.swap
+●   └─veritysetup.target
+[2025-07-17 12:59:11] Creating Plymouth service overrides...
+[2025-07-17 12:59:11] Plymouth override created
+[2025-07-17 12:59:11] === Step 3: Disabling getty and autologin services ===
+[2025-07-17 12:59:11] Stopping getty@tty1...
+[2025-07-17 12:59:11] Disabling autologin@dmi...
+Removed /etc/systemd/system/graphical.target.wants/autologin@dmi.service.
+[2025-07-17 12:59:12] Disabling getty@tty1...
+Removed /etc/systemd/system/getty.target.wants/getty@tty1.service.
+[2025-07-17 12:59:12] Removing getty override...
+removed '/etc/systemd/system/getty@tty1.service.d/override.conf'
+[2025-07-17 12:59:12] === Step 4: Installing NoDM ===
+Hit:1 http://ca.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://ca.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://ca.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:4 http://ca.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://ca.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2,751 kB]
+Get:6 http://ca.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,223 kB]
+Get:7 http://ca.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2,506 kB]
+Get:8 http://ca.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [373 kB]
+Get:9 http://ca.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [3,860 kB]
+Get:10 http://ca.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [695 kB]
+Get:11 http://ca.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [990 kB]
+Get:12 http://ca.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [215 kB]
+Fetched 13.0 MB in 30s (428 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  nodm
+0 upgraded, 1 newly installed, 0 to remove and 120 not upgraded.
+Need to get 36.6 kB of archives.
+After this operation, 123 kB of additional disk space will be used.
+Get:1 http://ca.archive.ubuntu.com/ubuntu jammy/universe amd64 nodm amd64 0.13-6build1 [36.6 kB]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 36.6 kB in 2s (16.5 kB/s)
+Selecting previously unselected package nodm.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149777 files and directories currently installed.)
+Preparing to unpack .../nodm_0.13-6build1_amd64.deb ...
+Unpacking nodm (0.13-6build1) ...
+Setting up nodm (0.13-6build1) ...
+[?1049h[22;0;0t[1;24r[4l[?25l(B[m[37m[40m[1;24r[H[2J[1;1H[97m[45m[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[1;1H[37mPackage configuration[6;3H[30m[47m┌───────────────────────────┤ [31mConfiguring nodm[30m ├───────────────────────────┐[7;3H│                                                                          │[97m[40m [8;3H[30m[47m│ Designed for embedded or kiosk systems, nodm starts an X session for a   │[97m[40m [9;3H[30m[47m│ user without asking for authentication. On regular machines, this has    │[97m[40m [10;3H[30m[47m│ security implications and is therefore disabled by default.              │[97m[40m [11;3H[30m[47m│                                                                          │[97m[40m [12;3H[30m[47m│ You should enable nodm only if you need autologin on this machine.       │[97m[40m [13;3H[30m[47m│                                                                          │[97m[40m [14;3H[30m[47m│ Enable nodm?                                                             │[97m[40m [15;3H[30m[47m│                                                                          │[97m[40m [16;3H[30m[47m│                    [37m[41m<Yes>[30m[47m                       <No>                      │[97m[40m [17;3H[30m[47m│                                                                          │[97m[40m [18;3H[30m[47m└──────────────────────────────────────────────────────────────────────────┘[97m[40m [19;4H                                                                            [16;25H

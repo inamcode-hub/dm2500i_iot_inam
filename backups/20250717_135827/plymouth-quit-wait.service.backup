@@ -1,0 +1,23 @@
+# /etc/systemd/system/plymouth-quit-wait.service
+[Unit]
+Description=Hold Plymouth until X is ready
+After=multi-user.target plymouth-start.service
+Before=getty@tty1.service
+
+[Service]
+Type=oneshot
+ExecStart=-/usr/bin/plymouth --wait
+RemainAfterExit=no
+StandardOutput=null
+StandardError=null
+
+# /etc/systemd/system/plymouth-quit-wait.service.d/nodm-override.conf
+[Unit]
+# Override to work with nodm instead of getty
+Conflicts=
+After=
+
+[Service]
+# Don't wait for getty, wait for nodm instead
+ExecStart=
+ExecStart=/bin/plymouth quit --wait

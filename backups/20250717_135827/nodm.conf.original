@@ -1,0 +1,22 @@
+# NoDM configuration for DMI kiosk system
+
+# Enable NoDM
+NODM_ENABLED=true
+
+# User to autologin
+NODM_USER=dmi
+
+# X session to run (will be sourced from user's .xsession)
+NODM_XSESSION=/home/dmi/.xsession
+
+# Minimum time (in seconds) that a session should last to be considered successful
+NODM_MIN_SESSION_TIME=60
+
+# X server arguments
+NODM_X_OPTIONS='-nolisten tcp'
+
+# First VT to use (should be the same as plymouth was using)
+NODM_FIRST_VT=7
+
+# PAM service to use
+NODM_PAM_SERVICE=nodm

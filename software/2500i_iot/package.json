@@ -1,0 +1,45 @@
+{
+  "name": "dm2500i-iot-device",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "node deploy.js",
+    "pm2:start": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop dm2500i-iot-device",
+    "pm2:restart": "pm2 restart dm2500i-iot-device",
+    "pm2:logs": "pm2 logs dm2500i-iot-device",
+    "pm2:status": "pm2 list"
+  },
+  "keywords": ["iot", "dm2500i", "device", "agent"],
+  "author": "DM2500i Team",
+  "license": "ISC",
+  "description": "DM2500i IoT Device Agent - Manages device-cloud communication",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "node-fetch": "^3.3.2",
+    "node-pty": "^1.0.0",
+    "pg": "^8.16.0",
+    "sequelize": "^6.37.7",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "_moduleAliases": {
+    "@utils": "src/utils",
+    "@device": "src/device",
+    "@network": "src/network",
+    "@db": "src/db",
+    "@services": "src/services"
+  }
+}

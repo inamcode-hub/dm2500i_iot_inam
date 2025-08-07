@@ -1,0 +1,193 @@
+[2025-07-17 13:58:27] Starting NoDM setup for DMI kiosk system
+[2025-07-17 13:58:27] === Step 1: Backing up current configuration ===
+[2025-07-17 13:58:27] Backing up systemd services...
+cp: cannot stat '/etc/systemd/system/autologin@dmi.service': No such file or directory
+cp: cannot stat '/etc/systemd/system/getty@tty1.service.d/override.conf': No such file or directory
+[2025-07-17 13:58:27] Backing up Plymouth-related services...
+[2025-07-17 13:58:27] Backups stored in: /home/dmi/inam/backups/20250717_135827
+[2025-07-17 13:58:27] === Step 2: Removing Plymouth getty dependencies ===
+[2025-07-17 13:58:27] Checking Plymouth service dependencies...
+plymouth-quit-wait.service
+● ├─system.slice
+● └─sysinit.target
+●   ├─apparmor.service
+●   ├─blk-availability.service
+●   ├─dev-hugepages.mount
+●   ├─dev-mqueue.mount
+●   ├─finalrd.service
+●   ├─keyboard-setup.service
+●   ├─kmod-static-nodes.service
+●   ├─lvm2-lvmpolld.socket
+●   ├─lvm2-monitor.service
+●   ├─multipathd.service
+○   ├─open-iscsi.service
+●   ├─plymouth-read-write.service
+○   ├─plymouth-start.service
+●   ├─proc-sys-fs-binfmt_misc.automount
+●   ├─setvtrgb.service
+●   ├─sys-fs-fuse-connections.mount
+●   ├─sys-kernel-config.mount
+●   ├─sys-kernel-debug.mount
+●   ├─sys-kernel-tracing.mount
+○   ├─systemd-ask-password-console.path
+●   ├─systemd-binfmt.service
+○   ├─systemd-boot-system-token.service
+●   ├─systemd-journal-flush.service
+●   ├─systemd-journald.service
+○   ├─systemd-machine-id-commit.service
+●   ├─systemd-modules-load.service
+●   ├─systemd-network-generator.service
+○   ├─systemd-pstore.service
+●   ├─systemd-random-seed.service
+●   ├─systemd-sysctl.service
+●   ├─systemd-sysusers.service
+●   ├─systemd-tmpfiles-setup-dev.service
+●   ├─systemd-tmpfiles-setup.service
+●   ├─systemd-udev-trigger.service
+●   ├─systemd-udevd.service
+●   ├─systemd-update-utmp.service
+●   ├─cryptsetup.target
+●   ├─local-fs.target
+●   │ ├─-.mount
+●   │ ├─boot-efi.mount
+●   │ ├─boot.mount
+○   │ ├─systemd-fsck-root.service
+●   │ └─systemd-remount-fs.service
+●   ├─swap.target
+●   │ └─swap.img.swap
+●   └─veritysetup.target
+[2025-07-17 13:58:27] Creating Plymouth service overrides...
+[2025-07-17 13:58:27] Plymouth override created
+[2025-07-17 13:58:27] === Step 3: Disabling getty and autologin services ===
+[2025-07-17 13:58:27] Stopping getty@tty1...
+[2025-07-17 13:58:27] Disabling autologin@dmi...
+[2025-07-17 13:58:27] Disabling getty@tty1...
+[2025-07-17 13:58:28] === Step 4: Installing NoDM ===
+Hit:1 http://ca.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ca.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://ca.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://ca.archive.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nodm is already the newest version (0.13-6build1).
+0 upgraded, 0 newly installed, 0 to remove and 120 not upgraded.
+[2025-07-17 13:58:35] === Step 5: Configuring NoDM ===
+[2025-07-17 13:58:35] NoDM configuration created
+[2025-07-17 13:58:35] === Step 6: Creating X session script ===
+[2025-07-17 13:58:35] X session script created
+[2025-07-17 13:58:35] === Step 7: Configuring systemd for NoDM ===
+[2025-07-17 13:58:35] NoDM systemd override created
+[2025-07-17 13:58:35] === Step 8: Updating Plymouth quit configuration ===
+[2025-07-17 13:58:35] Plymouth quit configuration updated
+[2025-07-17 13:58:35] === Step 9: Reloading systemd and enabling services ===
+[2025-07-17 13:58:35] Reloading systemd daemon...
+[2025-07-17 13:58:36] Enabling nodm service...
+Synchronizing state of nodm.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nodm
+The unit files have no installation config (WantedBy=, RequiredBy=, Also=,
+Alias= settings in the [Install] section, and DefaultInstance= for template
+units). This means they are not meant to be enabled using systemctl.
+ 
+Possible reasons for having this kind of units are:
+• A unit may be statically enabled by being symlinked from another unit's
+  .wants/ or .requires/ directory.
+• A unit's purpose may be to act as a helper for some other unit which has
+  a requirement dependency on it.
+• A unit may be started when needed via activation (socket, path, timer,
+  D-Bus, udev, scripted systemctl call, ...).
+• In case of template units, the unit is meant to be enabled with some
+  instance name specified.
+[2025-07-17 13:58:37] === Step 10: Verifying configuration ===
+[2025-07-17 13:58:37] Checking service status...
+● nodm.service - Display manager for automatic session logins
+     Loaded: loaded (/lib/systemd/system/nodm.service; indirect; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/nodm.service.d
+             └─dmi-override.conf
+     Active: active (running) since Thu 2025-07-17 13:30:11 UTC; 28min ago
+       Docs: man:nodm(8)
+   Main PID: 997 (nodm)
+      Tasks: 13 (limit: 9195)
+     Memory: 123.1M
+        CPU: 1.178s
+     CGroup: /system.slice/nodm.service
+             ├─ 997 /usr/sbin/nodm
+             └─4387 /usr/lib/xorg/Xorg :0 -nolisten tcp vt7
+
+Jul 17 13:45:09 dmi sh[4387]:         to make sure that you have the latest version.
+Jul 17 13:45:09 dmi sh[4387]: Markers: (--) probed, (**) from config file, (==) default setting,
+Jul 17 13:45:09 dmi sh[4387]:         (++) from command line, (!!) notice, (II) informational,
+Jul 17 13:45:09 dmi sh[4387]:         (WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+Jul 17 13:45:09 dmi sh[4387]: (==) Log file: "/var/log/Xorg.0.log", Time: Thu Jul 17 13:45:09 2025
+Jul 17 13:45:09 dmi sh[4387]: (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+Jul 17 13:45:10 dmi nodm[4401]: Successful su on ??? for dmi by root
+Jul 17 13:45:10 dmi nodm[4401]: pam_unix(nodm:session): session opened for user dmi(uid=1000) by (uid=0)
+Jul 17 13:45:10 dmi sh[4412]: [2025-07-17 13:45:10] Starting X session for DMI kiosk
+Jul 17 13:45:10 dmi sh[4419]: [2025-07-17 13:45:10] Running DMI startup script
+[2025-07-17 13:58:37] Checking for conflicts...
+nodm.service
+○ ├─gpu-manager.service
+○ ├─plymouth-quit.service
+● ├─system.slice
+● └─sysinit.target
+●   ├─apparmor.service
+●   ├─blk-availability.service
+●   ├─dev-hugepages.mount
+●   ├─dev-mqueue.mount
+●   ├─finalrd.service
+●   ├─keyboard-setup.service
+●   ├─kmod-static-nodes.service
+●   ├─lvm2-lvmpolld.socket
+●   ├─lvm2-monitor.service
+●   ├─multipathd.service
+○   ├─open-iscsi.service
+●   ├─plymouth-read-write.service
+○   ├─plymouth-start.service
+●   ├─proc-sys-fs-binfmt_misc.automount
+●   ├─setvtrgb.service
+●   ├─sys-fs-fuse-connections.mount
+●   ├─sys-kernel-config.mount
+●   ├─sys-kernel-debug.mount
+●   ├─sys-kernel-tracing.mount
+○   ├─systemd-ask-password-console.path
+●   ├─systemd-binfmt.service
+○   ├─systemd-boot-system-token.service
+●   ├─systemd-journal-flush.service
+●   ├─systemd-journald.service
+○   ├─systemd-machine-id-commit.service
+●   ├─systemd-modules-load.service
+●   ├─systemd-network-generator.service
+○   ├─systemd-pstore.service
+●   ├─systemd-random-seed.service
+●   ├─systemd-sysctl.service
+●   ├─systemd-sysusers.service
+●   ├─systemd-tmpfiles-setup-dev.service
+●   ├─systemd-tmpfiles-setup.service
+●   ├─systemd-udev-trigger.service
+●   ├─systemd-udevd.service
+●   ├─systemd-update-utmp.service
+●   ├─cryptsetup.target
+●   ├─local-fs.target
+●   │ ├─-.mount
+●   │ ├─boot-efi.mount
+●   │ ├─boot.mount
+○   │ ├─systemd-fsck-root.service
+●   │ └─systemd-remount-fs.service
+●   ├─swap.target
+●   │ └─swap.img.swap
+●   └─veritysetup.target
+[2025-07-17 13:58:37] === Setup Complete ===
+[2025-07-17 13:58:37] NoDM has been configured for the DMI kiosk system
+[2025-07-17 13:58:37] Configuration summary:
+[2025-07-17 13:58:37]   - NoDM will autologin user 'dmi'
+[2025-07-17 13:58:37]   - X session will run /home/dmi/.xsession
+[2025-07-17 13:58:37]   - .xsession will execute /home/dmi/inam/scripts/start-dm2500i.sh
+[2025-07-17 13:58:37]   - Plymouth will quit when NoDM starts
+[2025-07-17 13:58:37]   - Getty services have been disabled
+[2025-07-17 13:58:37] 
+[2025-07-17 13:58:37] Test script created: /home/dmi/inam/logs/nodm-setup/test-nodm.sh
+[2025-07-17 13:58:37] Full log available at: /home/dmi/inam/logs/nodm-setup/setup-20250717_135827.log
+[2025-07-17 13:58:37] 
+[2025-07-17 13:58:37] IMPORTANT: System will use NoDM on next reboot
+[2025-07-17 13:58:37] To test now without reboot: sudo /home/dmi/inam/logs/nodm-setup/test-nodm.sh
