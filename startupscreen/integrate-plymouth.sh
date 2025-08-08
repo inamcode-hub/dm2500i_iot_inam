@@ -158,8 +158,8 @@ cat > /home/dmi/.xinitrc << 'EOF'
 # Set black background
 xsetroot -solid "#000000" 2>/dev/null || true
 
-# Start Chromium
-exec chromium --kiosk
+# Start Firefox
+exec firefox-esr --kiosk
 EOF
 log_exec "chown dmi:dmi /home/dmi/.xinitrc"
 log_exec "chmod +x /home/dmi/.xinitrc"
@@ -196,7 +196,7 @@ echo "The boot flow will be:"
 echo "1. GRUB (instant) → Plymouth logo"
 echo "2. Auto-login via agetty on tty1"
 echo "3. .bash_profile starts X session"
-echo "4. Chromium launches in kiosk mode"
+echo "4. Firefox launches in kiosk mode"
 echo ""
 echo "Log saved to: $LOG_FILE"
 echo "Please reboot to test."

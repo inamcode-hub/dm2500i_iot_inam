@@ -4,14 +4,14 @@
 This is a custom Linux system setup for DMI that requires a clean, professional boot experience with a custom logo and robust application management.
 
 ## Main Goal
-Create a completely silent boot process that shows only the DMI logo from power-on until the X session (Chromium kiosk) starts, with no text, no boot messages, smooth transitions, and automatic recovery for all components.
+Create a completely silent boot process that shows only the DMI logo from power-on until the X session (Firefox ESR kiosk) starts, with no text, no boot messages, smooth transitions, and automatic recovery for all components.
 
 ## Current Setup
 - **OS**: Linux 5.15.0-143-generic
 - **User**: dmi
 - **Boot**: Plymouth with custom theme
 - **Display Manager**: NoDM (automatic login without getty)
-- **X Session**: Chromium kiosk mode on http://localhost:3002
+- **X Session**: Firefox ESR kiosk mode on http://localhost:3002
 - **Logo**: `/home/dmi/inam/boot-logo/logo.png`
 - **Process Manager**: PM2 for Node.js API
 - **Controller**: DM520_NEW binary
@@ -21,7 +21,7 @@ Create a completely silent boot process that shows only the DMI logo from power-
 1. **Silent Boot**: No GRUB menu, no boot messages, no text output
 2. **Logo Display**: Show DMI logo throughout entire boot process
 3. **Smooth Transition**: No black screens between Plymouth and X session
-4. **Auto-start**: Automatic login and launch of Chromium kiosk
+4. **Auto-start**: Automatic login and launch of Firefox ESR kiosk
 5. **Process Recovery**: Automatic restart of failed components
 6. **Logging**: All startup scripts log to `/home/dmi/inam/logs/`
 
@@ -65,7 +65,7 @@ Create a completely silent boot process that shows only the DMI logo from power-
    - Starts DM520 controller
    - Starts PM2 API with named process
    - Waits for API port availability
-   - Launches Chromium with retry logic
+   - Launches Firefox ESR with retry logic
    - Monitors main browser process
 5. **Monitor Script** (`monitor-dm2500i.sh`):
    - Checks all components every 30 seconds
@@ -98,7 +98,7 @@ Create a completely silent boot process that shows only the DMI logo from power-
 The monitor script automatically recovers:
 1. **DM520 Controller**: Restarts if process not found
 2. **PM2 API**: Restarts if port 3002 not responding
-3. **Chromium Browser**: Restarts if not running (only when API is up)
+3. **Firefox ESR Browser**: Restarts if not running (only when API is up)
 
 ## Known Issues & Solutions
 1. **Black screen after Plymouth**: Run `fix-plymouth-transition.sh`
@@ -123,7 +123,7 @@ tail -f /home/dmi/inam/logs/start-dm2500i-*.log
 tail -f /home/dmi/inam/logs/monitor-dm2500i-*.log
 
 # Check running processes
-ps aux | grep -E "(DM520|chromium|node|pm2)" | grep -v grep
+ps aux | grep -E "(DM520|firefox|node|pm2)" | grep -v grep
 pm2 list
 
 # Check API port
@@ -138,7 +138,7 @@ pkill -f DM520_NEW && cd /home/dmi/control && ./DM520_NEW &
 ## Manual Startup (for testing)
 ```bash
 # Kill all processes first
-pkill -f chromium
+pkill -f firefox
 pkill -f DM520
 pm2 kill
 

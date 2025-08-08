@@ -18,7 +18,7 @@ if [ -f /home/dmi/.xinitrc ]; then
     mv /home/dmi/.xinitrc "$ARCHIVE_DIR/"
 fi
 
-# Archive any old startup scripts from logs that reference chromium
+# Archive any old startup scripts from logs
 if [ -d /home/dmi/inam/scripts/.old-scripts ]; then
     echo "Old scripts already in archive folder"
 else

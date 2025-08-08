@@ -5,13 +5,13 @@
 touch /tmp/no-startx
 touch /tmp/dm2500i-stop
 
-# FIRST: Kill the startup script to stop chromium from restarting
+# FIRST: Kill the startup script to stop firefox from restarting
 pkill -9 -f "start-dm2500i.sh"
 sleep 0.5  # Give it time to die
 
 # THEN: Kill browser processes
 pkill -9 -f firefox-esr
-pkill -9 -f chromium
+pkill -9 -f firefox
 
 # Kill other services
 pkill -9 -f DM520
